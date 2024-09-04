@@ -117,6 +117,14 @@
     ```bash
     service nginx start
     ```
+    
+13. In order to be able to save changes to your configuration, edit `/etc/sudoers.d/pihole` to:
+
+     ```bash
+     lighttpd ALL=NOPASSWD: /usr/local/bin/pihole
+     nginx ALL=NOPASSWD: /usr/local/bin/pihole
+     Defaults secure_path = /sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin
+    ```   
 
 ### Optional configuration
 
